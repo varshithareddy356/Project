@@ -1,0 +1,796 @@
+`<!DOCTYPE html>
+<html>
+    <head>
+
+    
+<style> 
+tr:hover{
+  background-color: rgb(222, 214, 201);
+}
+table,td{
+    border-bottom: 1px black solid;
+}
+#va{
+    position: absolute;
+    left: 240px;
+    top: 530px;
+
+}
+#va1{
+    position: absolute;
+    left: 290px;
+    top: 680px;
+}
+ #va2{
+    position: absolute;
+    left: 550px;
+    top: 530px;
+ }
+ #va3{
+    position: relative;
+
+ left: 600px;
+ top: 159px;
+  
+ }
+ #va4{
+    position: absolute;
+    left: 900px;
+    top: 530px;
+ }
+ #va5{
+    position:relative;
+   left: 940px;
+   top: 115px;
+ }
+ #v6{
+    position: absolute;
+    left: 240px;
+   top: 740px;
+ }
+ #va6{
+    position: absolute;
+    left: 280px;
+    top: 890px;
+    
+ }
+ #v7{
+    position: absolute;
+    left: 550px;
+    top: 740px;
+    
+ }
+ #va7{
+    position: absolute;
+   left: 610px;
+   top: 890px;
+ }
+
+</style>
+    </head>
+    <body>
+       <!--<marquee> <h3>Mega Sale</h3></marquee>
+       <marquee> <h3 id="fa">on october 4th fashion begins</h3></marquee>
+       -->
+       <img src="https://cdn3.arabiccoupon.com/sites/default/files/styles/article/public/field/image/15-dec-2020_hm_articles-new-collection-arrived-in-hm-websites_en-01-.jpg" height="500px" width="1200px">
+       <img id="va"src="data:image/jpeg;base64,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" width="200px" height="150px" style="border-radius: 80px;">
+       <p id="va1">Women's clothing</p>
+    <img id="va2" src="https://www.liquoricekids.co.uk/cdn/shop/files/50_off_Summer_Sale_3_1400x.jpg?v=1688381560" width="200px" height="150px" style="border-radius: 80px;">
+    <p id="va3"> Kid's Clothing</p>
+    <img id="va4"src="https://media.istockphoto.com/id/822609802/photo/mens-clothing-and-personal-accessories.jpg?s=612x612&w=0&k=20&c=62-fRYCp5KUwgo-nifq4dxe6w3WROpzSHNxeIYVw1Ow=" width="200px" height="150px" style="border-radius: 80px;">
+    <p id="va5">Men's Zone</p>
+    <img id="v6" src="https://www.cosmeticsdesign-europe.com/var/wrbm_gb_food_pharma/storage/images/publications/cosmetics/cosmeticsdesign-europe.com/article/2020/10/19/waste-management-in-beauty-can-be-improved-if-brands-add-value-and-step-up-communication-says-certified-sustainable/11863453-1-eng-GB/Waste-management-in-beauty-can-be-improved-if-brands-add-value-and-step-up-communication-says-Certified-Sustainable.jpg"width="200px"height="150px" style="border-radius: 80px;">
+    <p id="va6">Beauty Products</p>
+    <img id="v7"src="https://cdn.shopify.com/s/files/1/0071/7406/2170/files/accessories-blog_1024x1024.jpg?v=1584702437" width="200px" height="150px" style="border-radius: 80px;">
+    <p id="va7">Jewellery</p>
+                <div id="varshi">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+          <button onclick="ALL1()" style="width: 150px;"><h5>Items</h5></button><br><br> 
+            <button onclick="elect()" style="width: 150px;" ><h5>Electronics</h5></button><br><br>
+        <button onclick="priceing()" style="width: 150px;"><h5>Mens clothing</h5></button><br><br>
+        <button onclick="clothes()" style="width: 150px;"><h5>Womens clothing</h5></button><br><br>
+       
+        <button onclick="orniments()" style="width: 150px;"><h5>Jewelery</h5></button><br><br><br><br>
+       
+        <!--<button onclick="clear1()">clear all</button>-->
+    </div> <hr>
+        <table id="tab"></table>
+       
+        
+        
+        <script>
+          let data = [
+    {
+        "id": 1,
+        "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+        "price": 109.95,
+        "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        "category": "men's clothing",
+        "image": "https://cdn.shopify.com/s/files/1/0266/6276/4597/products/300934490SAGE_2_1024x1024.jpg?v=1678967566",
+        "rating": {
+            "rate": 3.9,
+            "count": 120
+        }
+    },
+    {
+        "id": 2,
+        "title": "Mens Casual Premium Slim Fit T-Shirts ",
+        "price": 22.3,
+        "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+        "category": "men's clothing",
+        "image": "https://cdn.shopify.com/s/files/1/0266/6276/4597/products/300932113YELLOW_2_1024x1024.jpg?v=1680082983",
+        "rating": {
+            "rate": 4.1,
+            "count": 259
+        }
+    },
+    {
+        "id": 3,
+        "title": "Mens Cotton Jacket",
+        "price": 55.99,
+        "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+        "category": "men's clothing",
+        "image": "https://cdn.shopify.com/s/files/1/0266/6276/4597/products/300932486LIGHTBLUE_2_1024x1024.jpg?v=1680082975",
+        "rating": {
+            "rate": 4.7,
+            "count": 500
+        }
+    },
+    {
+        "id": 4,
+        "title": "Mens Casual Slim Fit",
+        "price": 15.99,
+        "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+        "category": "men's clothing",
+        "image": "https://cdn.shopify.com/s/files/1/0266/6276/4597/products/300933189TOBACCO_5_1024x1024.jpg?v=1684765802",
+        "rating": {
+            "rate": 2.1,
+            "count": 430
+        }
+    },
+    {
+        "id": 5,
+        "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+        "price": 695,
+        "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+        "category": "jewelery",
+        "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+        "rating": {
+            "rate": 4.6,
+            "count": 400
+        }
+    },
+    {
+        "id": 6,
+        "title": "Solid Gold Petite Micropave ",
+        "price": 168,
+        "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
+        "category": "jewelery",
+        "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+        "rating": {
+            "rate": 3.9,
+            "count": 70
+        }
+    },
+    {
+        "id": 7,
+        "title": "White Gold Plated Princess",
+        "price": 9.99,
+        "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
+        "category": "jewelery",
+        "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+        "rating": {
+            "rate": 3,
+            "count": 400
+        }
+    },
+    {
+        "id": 8,
+        "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+        "price": 10.99,
+        "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
+        "category": "jewelery",
+        "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+        "rating": {
+            "rate": 1.9,
+            "count": 100
+        }
+    },
+    {
+        "id": 9,
+        "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
+        "price": 64,
+        "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+        "rating": {
+            "rate": 3.3,
+            "count": 203
+        }
+    },
+    {
+        "id": 10,
+        "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+        "price": 109,
+        "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+        "rating": {
+            "rate": 2.9,
+            "count": 470
+        }
+    },
+    {
+        "id": 11,
+        "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+        "price": 109,
+        "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+        "rating": {
+            "rate": 4.8,
+            "count": 319
+        }
+    },
+    {
+        "id": 12,
+        "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+        "price": 114,
+        "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
+        "rating": {
+            "rate": 4.8,
+            "count": 400
+        }
+    },
+    {
+        "id": 13,
+        "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
+        "price": 599,
+        "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
+        "rating": {
+            "rate": 2.9,
+            "count": 250
+        }
+    },
+    {
+        "id": 14,
+        "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
+        "price": 999.99,
+        "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
+        "category": "electronics",
+        "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
+        "rating": {
+            "rate": 2.2,
+            "count": 140
+        }
+    },
+    {
+        "id": 15,
+        "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+        "price": 56.99,
+        "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+        "rating": {
+            "rate": 2.6,
+            "count": 235
+        }
+    },
+    {
+        "id": 16,
+        "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
+        "price": 29.95,
+        "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
+        "category": "women's clothing",
+        "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
+        "rating": {
+            "rate": 2.9,
+            "count": 340
+        }
+    },
+    {
+        "id": 17,
+        "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+        "price": 39.99,
+        "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
+        "category": "women's clothing",
+        "image": "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/300957248CHOCOLATEBROWN_2_1024x1024.jpg?v=1695383536",
+        "rating": {
+            "rate": 3.8,
+            "count": 679
+        }
+    },
+    {
+        "id": 18,
+        "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
+        "price": 9.85,
+        "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
+        "category": "women's clothing",
+        "image": "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/300954838WHITE_2_1024x1024.jpg?v=1695371225",
+        "rating": {
+            "rate": 4.7,
+            "count": 130
+        }
+    },
+    {
+        "id": 19,
+        "title": "Opna Women's Short Sleeve Moisture",
+        "price": 7.95,
+        "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
+        "category": "women's clothing",
+        "image": "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/300953391TANGERINE_2_1024x1024.jpg?v=1695371174",
+        "rating": {
+            "rate": 4.5,
+            "count": 146
+        }
+    },
+    {
+        "id": 20,
+        "title": "DANVOUY Womens T Shirt Casual Cotton Short",
+        "price": 12.99,
+        "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+        "category": "women's clothing",
+        "image": "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/300953170BLACK_2_1024x1024.jpg?v=1695371180",
+        "rating": {
+            "rate": 3.6,
+            "count": 145
+        }
+    }, 
+]
+
+
+
+
+  let ALL1=()=>{
+    clear1()
+    data.forEach((val,ind) => {
+        console.log(val);
+        let a=document.getElementById("tab");
+        let createTr=document.createElement("tr");
+        let createTd=document.createElement("td");
+        createTd.innerText = val.id;
+        createTr.appendChild(createTd);
+        let createTdimgg=document.createElement("td")
+        let Imgg=document.createElement("img");
+        Imgg.setAttribute("src",val["image"]);
+        Imgg.style.width="200px";
+        Imgg.style.height="200px";
+        createTdimgg.appendChild(Imgg);
+        createTr.appendChild(createTdimgg);
+        a.appendChild(createTr);
+        let createtd1=document.createElement("td")
+        createtd1.innerText= val.category;
+        createTr.appendChild(createtd1);
+        a.appendChild(createTr);
+        let createtd2=document.createElement("td")
+        createtd2.innerText= val.description;
+        createTr.appendChild(createtd2);
+        let createtd4=document.createElement("td");
+      createtd4.innerText=val.price;
+      createTr.appendChild(createtd4);
+      
+        let btn1=document.createElement("button");
+        btn1.innerText="view More";
+        let createtd3=document.createElement("td");
+        createtd3.appendChild(btn1);
+        createTr.appendChild(createtd3);
+        btn1.addEventListener("click",()=>{
+            localStorage.setItem("produtcs",JSON.stringify(data[ind]));
+       window.location.assign("./window.html")
+       })
+     createtd2.style.overflow="auto";
+     
+    })
+   
+  }
+
+
+let men=data.filter(function(val){
+       return val.category==="men's clothing"
+})
+  console.log(men);
+
+
+  let priceing=()=>{
+  clear1()
+  men.forEach((val,ind) => {
+      console.log(val);
+      let a=document.getElementById("tab");
+      let createTr=document.createElement("tr");
+      let createTd=document.createElement("td");
+      createTd.innerText = val.id;
+      createTr.appendChild(createTd);
+      let createTdimgg=document.createElement("td")
+      let Imgg=document.createElement("img");
+      Imgg.setAttribute("src",val["image"]);
+      Imgg.style.width="200px";
+      Imgg.style.height="200px";
+      createTdimgg.appendChild(Imgg);
+      createTr.appendChild(createTdimgg);
+      a.appendChild(createTr);
+      let createtd1=document.createElement("td")
+      createtd1.innerText= val.category;
+      createTr.appendChild(createtd1);
+      a.appendChild(createTr);
+      let createtd2=document.createElement("td")
+      createtd2.innerText= val.description;
+      createTr.appendChild(createtd2);
+      let createtd4=document.createElement("td");
+      createtd4.innerText=val.price;
+      createTr.appendChild(createtd4);
+      let btn1=document.createElement("button");
+      btn1.innerText="view More";
+      let createtd3=document.createElement("td");
+      createtd3.appendChild(btn1);
+      createTr.appendChild(createtd3);
+      btn1.addEventListener("click",()=>{
+          localStorage.setItem("produtcs",JSON.stringify(data[ind]));
+     window.location.assign("./window.html")
+     })
+   createtd2.style.overflow="auto";
+   
+  })
+
+}
+let women=data.filter(function(val){
+       return val.category==="women's clothing";
+})
+  console.log(women);
+let clothes=()=>{
+  clear1()
+ women.forEach((val,ind) => {
+      console.log(val);
+      let a=document.getElementById("tab");
+      let createTr=document.createElement("tr");
+      let createTd=document.createElement("td");
+      createTd.innerText = val.id;
+      createTr.appendChild(createTd);
+      let createTdimgg=document.createElement("td")
+      let Imgg=document.createElement("img");
+      Imgg.setAttribute("src",val["image"]);
+      Imgg.style.width="200px";
+      Imgg.style.height="200px";
+      createTdimgg.appendChild(Imgg);
+      createTr.appendChild(createTdimgg);
+      a.appendChild(createTr);
+      let createtd1=document.createElement("td")
+      createtd1.innerText= val.category;
+      createTr.appendChild(createtd1);
+      a.appendChild(createTr);
+      let createtd2=document.createElement("td")
+      createtd2.innerText= val.description;
+      createTr.appendChild(createtd2);
+      let createtd4=document.createElement("td");
+      createtd4.innerText=val.price;
+      createTr.appendChild(createtd4);
+      let btn1=document.createElement("button");
+      btn1.innerText="view More";
+      let createtd3=document.createElement("td");
+      createtd3.appendChild(btn1);
+      createTr.appendChild(createtd3);
+      btn1.addEventListener("click",()=>{
+          localStorage.setItem("produtcs",JSON.stringify(women[ind]));
+     window.location.assign("./window.html")
+     })
+   createtd2.style.overflow="auto";
+   
+  })
+}
+let elect1=data.filter(function(val){
+       return val.category==="electronics";
+})
+  console.log(elect1);
+let elect=()=>{
+  clear1()
+  elect1.forEach((val,ind) => {
+      console.log(val);
+      let a=document.getElementById("tab");
+      let createTr=document.createElement("tr");
+      let createTd=document.createElement("td");
+      createTd.innerText = val.id;
+      createTr.appendChild(createTd);
+      let createTdimgg=document.createElement("td")
+      let Imgg=document.createElement("img");
+      Imgg.setAttribute("src",val["image"]);
+      Imgg.style.width="200px";
+      Imgg.style.height="200px";
+      createTdimgg.appendChild(Imgg);
+      createTr.appendChild(createTdimgg);
+      a.appendChild(createTr);
+      let createtd1=document.createElement("td")
+      createtd1.innerText= val.category;
+      createTr.appendChild(createtd1);
+      a.appendChild(createTr);
+      let createtd2=document.createElement("td")
+      createtd2.innerText= val.description;
+      createTr.appendChild(createtd2);
+      let createtd4=document.createElement("td");
+      createtd4.innerText=val.price;
+      createTr.appendChild(createtd4);
+      let btn1=document.createElement("button");
+      btn1.innerText="view More";
+      let createtd3=document.createElement("td");
+      createtd3.appendChild(btn1);
+      createTr.appendChild(createtd3);
+      btn1.addEventListener("click",()=>{
+          localStorage.setItem("produtcs",JSON.stringify(elect1[ind]));
+     window.location.assign("./window.html")
+     })
+   createtd2.style.overflow="auto";
+   
+  })
+}
+let jewel=data.filter(function(val){
+       return val.category==="jewelery";
+})
+  console.log(jewel);
+let orniments=()=>{
+  clear1()
+  jewel.forEach((val,ind) => {
+      console.log(val);
+      let a=document.getElementById("tab");
+      let createTr=document.createElement("tr");
+      let createTd=document.createElement("td");
+      createTd.innerText = val.id;
+      createTr.appendChild(createTd);
+      let createTdimgg=document.createElement("td")
+      let Imgg=document.createElement("img");
+      Imgg.setAttribute("src",val["image"]);
+      Imgg.style.width="200px";
+      Imgg.style.height="200px";
+      createTdimgg.appendChild(Imgg);
+      createTr.appendChild(createTdimgg);
+      a.appendChild(createTr);
+      let createtd1=document.createElement("td")
+      createtd1.innerText= val.category;
+      createTr.appendChild(createtd1);
+      a.appendChild(createTr);
+      let createtd2=document.createElement("td")
+      createtd2.innerText= val.description;
+      createTr.appendChild(createtd2);
+      let createtd4=document.createElement("td");
+      createtd4.innerText=val.price;
+      createTr.appendChild(createtd4);
+      let btn1=document.createElement("button");
+      btn1.innerText="view More";
+      let createtd3=document.createElement("td");
+      createtd3.appendChild(btn1);
+      createTr.appendChild(createtd3);
+      btn1.addEventListener("click",()=>{
+          localStorage.setItem("produtcs",JSON.stringify(jewel[ind]));
+     window.location.assign("./window.html")
+     })
+   createtd2.style.overflow="auto";
+   
+  })
+}
+
+      
+    
+let clear1=()=>{
+    var a=document.getElementById("tab");
+    a.innerText="";
+}
+localStorage.setItem("produtcs",JSON.stringify(data));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

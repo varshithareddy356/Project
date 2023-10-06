@@ -1,0 +1,78 @@
+<html>
+    <head>
+      <style>
+      body{
+        background-image: url(https://media.istockphoto.com/id/1249219777/photo/shopping-online-concept-parcel-or-paper-cartons-with-a-shopping-cart-logo-in-a-trolley-on-a.jpg?s=612x612&w=0&k=20&c=EWKEahyVLY8iAHyirCCDESHRGW37lqUJ7In0SssNSLE=);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      div{
+        position: relative;
+        left: 150px;
+        top: 130px;
+        width: 300px;
+        height: 240px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid rgba(4, 177, 131, 0.776);
+        background-color: rgba(12, 227, 205, 0.904);
+      }
+      </style>
+    </head>
+    <body>
+        <div>
+      <h1>
+        Login
+      </h1>
+        <form action="">
+            Username:<input type="text" placeholder="enter your name"><br><br>
+           
+           Gmail: <input type="email" placeholder="Enter emailid"><br><br>
+          
+           Password: <input type="password" placeholder="Enter Password"><br><br>
+          
+           <div style="display: none; color: darkgreen;">login successfull</div>
+           <span style="display: none; color: red;">invalid credentials</span>
+           <input type="submit" value="login" id="submit" style="position: relative; width: 100px; height: 30px; left: 80px;">
+        </form>
+    </div>
+        <script>
+var storedarr=localStorage.getItem("array");
+var a=JSON.parse(storedarr);
+console.log(a);
+
+          document.forms[0].addEventListener("submit", (event) => {
+            event.preventDefault();
+            var username = event.target[0].value;
+            var gmail = event.target[1].value;
+            var password = event.target[2].value;
+              for(var i=0;i<a.length;i++){
+
+            if (username===a[i].username && gmail===a[i].gmaill && password===a[i].Password) {
+       let gettingdiv=document.querySelector("div");
+       gettingdiv.style.display="block";
+      let gettingspan=document.querySelector("span");
+      gettingspan.style.display="none";
+      window.open("./1.html","_self");
+      break;
+    
+            }
+          
+         if(i===a.length-1){
+            let gettingspan=document.querySelector("span");
+            gettingspan.style.display="block";
+       let gettingdiv=document.querySelector("div");
+       gettingdiv.style.display="none";
+         }
+        }
+        
+        })
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

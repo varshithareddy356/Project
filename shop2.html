@@ -1,0 +1,129 @@
+<html>
+    <head>
+      <style>
+      body{
+        background-image: url(https://i.pinimg.com/736x/56/7c/ae/567cae7c5e5431909718620b5a2a9aa3.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      #h{
+        
+        margin: 2px;
+        padding: 30px;
+       
+        border: 2px solid black;
+        width: 300px;
+        height: 390px;
+        position: relative;
+        left: 500px;
+        top: 40px;
+      }
+      div{
+        background-color: rgba(222, 40, 8, 0.317);
+      }
+      </style>
+    </head>
+    <body>
+      <div id="h">
+        
+      <h1>Registration Page</h1>
+        <form action="">
+           User Name: <input type="text" placeholder="Enter User Name"><br><br>
+           <span id="first" style="color: red; font-size: 12; display: none;">Should contain 9 characters and start with v</span>
+           Pass Word: <input type="password" placeholder="Enter Password"><br><br>
+           Confirm Password: <input type="password" placeholder="Enter Confirm password"><br><br>
+           <span id="second" style="color: red; font-size: 12; display: none;">Password and confirm password do not match</span>
+           Date of birth: <input type="date"><br><br>
+           Gmail: <input type="email" placeholder="Enter Gmail"><br><br>
+           <span id="three" style="display: none; font-size: 12px; color: red;">Enter Correct mail Address</span>
+           Phone number: <input type="number" placeholder="Enter Mobile Number"><br><br>
+           <span id="four" style="display: none; font-size: 12px; color: red;">Enter correct phone number starting with 9,8,7,6</span>
+           <input type="submit" value="Register" style="position: relative;width: 120px;height: 30px;left: 30px;">
+           <input type="reset" style="position: relative;width: 120px;height: 30px; left: 50px;">
+        </form>
+  </div>
+    
+         
+        <script>
+        
+         
+         document.forms[0].addEventListener("submit", (event) => {
+            event.preventDefault();
+            var usernam=event.target[0].value;
+            var password=event.target[1].value;
+            var confirmpassword=event.target[2].value;
+            var dob=event.target[3].value;
+            var gmail=event.target[4].value;
+            var phone=event.target[5].value;
+        
+            if (usernam.length===9 && usernam[0] === "v") {
+       
+              document.getElementById("first")
+              event.target[0].style.border = "block";
+              event.target[0].style.color = "black";
+
+              if (password===confirmpassword) {
+                
+                document.getElementById("second").style.display = "none";
+                event.target[1].style.border = "block";
+                event.target[2].style.border = "block";
+                event.target[1].style.color = "black";
+                event.target[2].style.color = "black";
+
+                if (gmail.endsWith("@gmail.com")) {
+              
+                  document.getElementById("three").style.display = "none";
+                  event.target[4].style.border = "block";
+                  event.target[4].style.color = "black";
+
+                  if ((phone[0]==9||phone[0]==8||phone[0]==7||phone[0]==6) && (phone.length === 10)) {
+                    
+                    document.getElementById("four").style.display = "none";
+                    event.target[5].style.border = "block";
+                    event.target[5].style.color = "black";
+
+                    window.location.assign("./shop3.html");
+                  } else {
+                  
+                    document.getElementById("four").style.display = "block";
+                    event.target[5].style.border = "2px solid red";
+                  }
+                } else {
+                  
+                  document.getElementById("three").style.display = "block";
+                  event.target[4].style.border = "2px solid red";
+                }
+              } else {
+                
+                document.getElementById("second").style.display = "block";
+                event.target[1].style.border = "2px red solid";
+                event.target[2].style.border = "2px red solid";
+              }
+            } else {
+             
+              document.getElementById("first").style.display = "block";
+              event.target[0].style.border = "2px red solid";
+            }
+        
+          var arr=[];
+          let obj={
+        username:usernam,
+        Password:password,
+        confirmPassword:confirmpassword,
+        gmaill:gmail,
+        dobb:dob,
+        phonee:phone
+
+    }
+
+console.log(obj);
+
+arr.push(obj);
+console.log(arr);
+localStorage.setItem("array",JSON.stringify(arr));
+
+  });
+
+        </script>
+    </body>
+</html>

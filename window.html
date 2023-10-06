@@ -1,0 +1,56 @@
+<html>
+    <head>
+      <style>
+        #two{
+            position: relative;
+            left: 960px;
+            width: 100px;
+            height: 60px;
+            font-size: 20px;
+        }
+        #three{
+          position: relative;
+          width: 200px;
+          height: 60px;
+        }
+      </style>
+    </head>
+    <body>
+        <h3></h3>
+      <h3></h3>
+      <img src="">
+      <h4></h4>
+      <h4></h4>
+      <button  onclick="back()" id="two">Back</button>
+      <button onclick="main()" id="three">Go to Main Page</button>
+     <script>
+        var d=localStorage.getItem("produtcs");
+        var d1=JSON.parse(d);
+         var e=document.querySelectorAll("h3");
+         e[0].innerText=d1["id"];
+         e[0].style.textAlign="center";
+         e[1].innerText=d1["category"];
+         e[1].style.textAlign="center";
+         let imgg=document.querySelector("img");
+         imgg.setAttribute("src",d1["image"]);
+         imgg.style.width="200px";
+         imgg.style.height="200px";
+         imgg.style.position="relative";
+         imgg.style.left="500px";
+         var f=document.querySelectorAll("h4");
+         f[0].innerText=d1["price"];
+         f[0].style.textAlign="center";
+         f[1].innerText=d1["description"];
+         f[1].style.textAlign="center";
+         let back=()=>{
+            window.history.back()
+
+         }
+         let main=()=>{
+          window.open("./2.html","_self")
+         }
+
+     </script>
+    </body>
+
+</html>
